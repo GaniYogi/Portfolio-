@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Y V Portfolio</title>
+    <meta name="description"
+        content="Personal portfolio website of Ganesh Y V, a UI/UX Designer based in India. View my work, services, and get in touch.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo"><span>G</span>ani</div>
+                <ul id="sidemenu">
+                    <li><a href="#header" onclick="closemenu()">Home</a></li>
+                    <li><a href="#about" onclick="closemenu()">About</a></li>
+                    <li><a href="#services" onclick="closemenu()">Services</a></li>
+                    <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
+                    <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span class="gradient-text">Ganesh Y V</span><br>From India</h1>
+                <div class="gradient-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/about.png" alt="Ganesh Y V">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-desc">
+                        Hello! I'm <strong>Ganesh Y V</strong>, a Computer Science Engineering student specializing in
+                        Artificial Intelligence and Machine Learning (CSE-AIML) at AMC Engineering College, graduating
+                        in 2026.<br><br>
+                        I am passionate about technology, software development, and creating innovative digital
+                        solutions that solve real-world problems. My technical skills include HTML, CSS, Android App
+                        Development, Firebase, UI/UX Design, Kotlin, Java, and modern web technologies.<br><br>
+                        Throughout my academic journey, I have worked on several impactful projects including Skill
+                        Exchange Application, AI Blueprint Error Detection System, Finance Tracker, and Find My Business
+                        Partner. These projects have helped me gain hands-on experience in mobile application
+                        development, AI-based solutions, database management, and user-centered design.<br><br>
+                        I also completed my internship at MindMatrix, where I enhanced my practical development skills,
+                        teamwork, and problem-solving abilities in a professional environment.<br><br>
+                        My goal is to continuously learn emerging technologies, build meaningful products, and achieve
+                        significant milestones in the technology industry. I aspire to become a successful software
+                        engineer and create innovative solutions that make a positive impact on society.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Android Development</span><br>Building modern Android applications using Java,
+                                Kotlin, Firebase, and Android Studio with a focus on performance and user experience.
+                            </li>
+                            <li><span>Firebase Development</span><br>Implementing Authentication, Firestore, Realtime
+                                Database, and Cloud Storage to develop scalable mobile applications.</li>
+                            <li><span>UI/UX Design</span><br>Designing intuitive user interfaces, wireframes, and
+                                interactive prototypes that enhance usability and user engagement.</li>
+                            <li><span>Web Development</span><br>Creating responsive websites using HTML, CSS,
+                                JavaScript, and modern web development practices.</li>
+                            <li><span>AI & Machine Learning</span><br>Developing intelligent solutions and AI-based
+                                applications including blueprint error detection and smart recommendation systems.</li>
+                            <li><span>Problem Solving</span><br>Analyzing complex challenges and building innovative
+                                software solutions through logical thinking and practical implementation.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>2019</span><br>
+                                Completed Secondary School Leaving Certificate (SSLC)
+                            </li>
+
+                            <li>
+                                <span>2021 - 2022</span><br>
+                                Completed Pre-University Course (PUC)
+                            </li>
+
+                            <li>
+                                <span>2023 - 2026</span><br>
+                                Bachelor of Engineering (B.E.) in Computer Science Engineering (Artificial Intelligence
+                                & Machine Learning)<br>
+                                AMC Engineering College, Bengaluru
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div class="service">
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Creating intuitive user interfaces and seamless user experiences for web and mobile applications.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h2>App Development</h2>
+                    <p>Building high-performance native Android applications with modern features and best practices.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web & App Development</h2>
+                    <p>Developing responsive and user-friendly websites using HTML, CSS, JavaScript, and modern web
+                        technologies.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <div class="work-img-box">
+                        <img src="Images/work 11.png.png" alt="Skill Exchange">
+                    </div>
+                    <div class="work-info">
+                        <h3>Skill Exchange</h3>
+                        <p>
+                            Platform connecting skilled professionals<br>
+                            and service seekers with real-time chat,<br>
+                            secure transactions, and seamless<br>
+                            service exchange experiences.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="work-img-box">
+                        <img src="Images/work 22.png.png" alt="VTU Plus">
+                    </div>
+                    <div class="work-info">
+                        <h3>VTU Plus</h3>
+                        <p>
+                            Student utility website providing SGPA,<br>
+                            CGPA calculators, VTU resources,<br>
+                            notes, updates, and productivity tools.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="work-img-box">
+                        <img src="Images/work 33.png.png" alt="Find My Business Partner">
+                    </div>
+                    <div class="work-info">
+                        <h3>Find My Business Partner</h3>
+                        <p>
+                            Networking platform connecting founders,<br>
+                            investors, and entrepreneurs to build,<br>
+                            collaborate, and grow innovative startups.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> ganiyogi@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 9620030683</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Images/GANESH Y V_RESUME.pdf" Download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Enter your name" required>
+                        <input type="email" name="Email" placeholder="Enter your email" required>
+                        <input type="text" name="Subject" placeholder="Enter your subject" required>
+                        <textarea name="Message" rows="6" placeholder="Enter your message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Ganesh Y V. Made with <i class="fa-solid fa-heart" style="color: #df52ff;"></i> in India.</p>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
