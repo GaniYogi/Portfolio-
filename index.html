@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
 </head>
 
 <body>
@@ -46,7 +47,7 @@
                     <img src="Images/about.png" alt="Ganesh Y V">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
+                    <h2 class="sub-title">About Me</h2>
                     <p class="about-desc">
                         Hello! I'm <strong>Ganesh Y V</strong>, a Computer Science Engineering student specializing in
                         Artificial Intelligence and Machine Learning (CSE-AIML) at AMC Engineering College, graduating
@@ -113,7 +114,7 @@
     </div>
     <div id="services">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
+            <h2 class="sub-title">My Services</h2>
             <div class="services-list">
                 <div class="service">
                     <i class="fa-solid fa-crop-simple"></i>
@@ -141,7 +142,7 @@
     </div>
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h2 class="sub-title">My Work</h2>
             <div class="work-list">
                 <div class="work">
                     <div class="work-img-box">
@@ -194,7 +195,7 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
+                    <h2 class="sub-title">Contact Me</h2>
                     <p><i class="fa-solid fa-paper-plane"></i> ganiyogi@gmail.com</p>
                     <p><i class="fa-solid fa-phone"></i> +91 9620030683</p>
                     <div class="social-icons">
@@ -206,7 +207,7 @@
                     <a href="Images/GANESH Y V_RESUME.pdf" Download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Enter your name" required>
                         <input type="email" name="Email" placeholder="Enter your email" required>
                         <input type="text" name="Subject" placeholder="Enter your subject" required>
@@ -238,13 +239,56 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-        
+
         var sidemenu = document.getElementById("sidemenu");
         function openmenu() {
             sidemenu.style.right = "0";
         }
         function closemenu() {
             sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-message">
+                <span class="toast-text-1">Success</span>
+                <span class="toast-text-2">Your message has been sent successfully!</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark toast-close" onclick="closeToast()"></i>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby9_-_tbsfzwJKXaiSo4JSyg3IGTyBfc4ybelI5kVEfaqnUudbQvYdBafGEoGt1xBgk/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const toast = document.getElementById("toast")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => {
+                    showToast();
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+
+        function showToast() {
+            toast.classList.add("active");
+            setTimeout(function () {
+                toast.classList.remove("active");
+            }, 5000);
+        }
+
+        function closeToast() {
+            toast.classList.remove("active");
         }
     </script>
 </body>

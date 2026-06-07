@@ -548,6 +548,22 @@ nav .fas {
         line-height: 1.5;
         margin-bottom: 15px;
     }
+
+    /* Toast mobile responsiveness */
+    .toast {
+        top: auto;
+        bottom: 25px;
+        right: 15px;
+        left: 15px;
+        width: auto;
+        max-width: none;
+        transform: translateY(150%);
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .toast.active {
+        transform: translateY(0);
+    }
 }
 
 /* services section */
@@ -808,6 +824,76 @@ form button.btn2 {
 form button.btn2:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(223, 82, 255, 0.4);
+}
+
+/* Toast Notification Style */
+.toast {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    background: rgba(17, 17, 22, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px 25px 20px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    max-width: calc(100vw - 60px);
+    transform: translateX(120%);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast.active {
+    transform: translateX(0);
+}
+
+.toast-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.toast-icon {
+    font-size: 28px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.toast-message {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.toast-text-1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.toast-text-2 {
+    font-size: 13px;
+    color: #b5b5c3;
+    font-weight: 400;
+}
+
+.toast-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: #8a8a9e;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.toast-close:hover {
+    color: var(--text-color);
 }
 
 /* Footer Copyright */
